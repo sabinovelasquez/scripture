@@ -8,4 +8,6 @@
 //=require vendor/ui-bootstrap-tpls-0.14.3.min
 //=require vendor/angulartics
 //=require vendor/angulartics-google-analytics
+//=require vendor/firebase
+//=require vendor/angularfire.min
 //= require_tree ./lib
