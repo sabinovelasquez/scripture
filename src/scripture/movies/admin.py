@@ -4,16 +4,16 @@ from .models import Movie, Script
 
 class ScriptInline(admin.StackedInline):
 	model = Script
-	extra = 8
+	extra = 1
 
 	def get_extra (self, request, obj=None, **kwargs):
 		if obj:
-			return 0
+			return 7
 		return self.extra
 
 class MovieAdmin(admin.ModelAdmin):
 	fieldsets = [
-		( 'Movie', {'fields': ['name', 'director', 'writer', 'year', 'pub_date']}),
+		( 'Movie', {'fields': ['name', 'cover', 'director', 'writer', 'year', 'pub_date']}),
 	]
 	inlines = [ScriptInline]
 
