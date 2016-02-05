@@ -24,7 +24,7 @@ class Script(models.Model):
   ACT_CHOICES = (
     (ACT_I, 'ACT I'), (ACT_II, 'ACT II'), (ACT_III, 'ACT III'),
   )
-  script = models.ForeignKey(Movie, on_delete=models.CASCADE)
+  script = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='sequences')
   act = models.CharField( max_length = 2, choices=ACT_CHOICES, default= ACT_I )
   sequence = models.IntegerField(default=0)
   description = models.TextField( max_length = 140 )
