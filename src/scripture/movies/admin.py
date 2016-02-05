@@ -2,9 +2,19 @@ from django.contrib import admin
 
 from .models import Movie, Script
 
-class ScriptAdmin(admin.ModelAdmin):
-	fieldsets = [
-		()
-	]
+class ScriptInline(admin.StackedInline):
+	model = Script
+	extra = 8
 
-admin.site.register(Movie, ScriptAdmin)
+	def get_extra (self, request, obj=None, **kwargs):
+		if obj:
+			return 0
+		return self.extra
+
+class MovieAdmin(admin.ModelAdmin):
+	fieldsets = [
+		( 'Movie', {'fields': ['name', 'director', 'writer', 'year', 'pub_date']}),
+	]
+	inlines = [ScriptInline]
+
+admin.site.register(Movie, MovieAdmin)
