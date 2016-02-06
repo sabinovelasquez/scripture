@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404, render
 
-from .models import Movie
+from .models import Movie, Script
 
 def detail(request, movie_id):
     movie = get_object_or_404(Movie, pk=movie_id)

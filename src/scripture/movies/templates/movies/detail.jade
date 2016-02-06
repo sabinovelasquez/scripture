@@ -6,7 +6,17 @@ html
 		link(rel="stylesheet", type="text/css", href="{% static 'style.css' %}")
 	body
 		h1 {{ movie.name }}
+		h2 {{ movie.year }}
+		h2 {{ movie.director }}
+		h2 {{ movie.writer }}
+		img( src=" {{ movie.cover }}" )
 		ul
-			| {% for script in movie.script_set.all %}
-			li {{ script.sequence }}
+			| {% for script in movie.sequences.all %}
+			li
+				span
+					{{ script.act }}
+				span
+					{{ script.sequence }}
+				span
+					{{ script.description }}
 			| {% endfor %}
