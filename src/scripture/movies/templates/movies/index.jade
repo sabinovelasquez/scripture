@@ -1,0 +1,20 @@
+{% load staticfiles %}
+doctype html
+html
+  head
+    title my jade template
+    link(rel="stylesheet", type="text/css", href="{% static 'style.css' %}")
+  body
+    h1 Hello
+    | {% if latest_movie_list %}
+    ul
+      | {% for movie in latest_movie_list %}
+      li
+        a(href="/movies/{{ movie.id }}/")
+          {{ movie.name }}
+      | {% endfor %}
+
+    | {% else %}
+    p
+      | nothing.
+    | {% endif %}

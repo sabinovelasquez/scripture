@@ -1,13 +1,12 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 
 from .models import Movie
 
 def detail(request, movie_id):
-  return HttpResponse("Movie %s." % movie_id)
-
+    movie = get_object_or_404(Movie, pk=movie_id)
+    return render(request, 'movies/detail.jade', {'movie': movie})
 
 def index(request):
-    latest_premise_list = Premise.objects.order_by('-pub_date')[:5]
-    context = {'latest_premise_list': latest_premise_list}
-    return render(request, 'premises/index.jade', context)
+    latest_movie_list = Movie.objects.order_by('-pub_date')[:5]
+    context = {'latest_movie_list': latest_movie_list}
+    return render(request, 'movies/index.jade', context)
