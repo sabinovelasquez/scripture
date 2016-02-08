@@ -1,8 +1,11 @@
 {% load staticfiles %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+
 doctype html
 html
   head
-    title my jade template
+    title Index
     link(rel="stylesheet", type="text/css", href="{% static 'style.css' %}")
   body
     h1 Hello
@@ -11,6 +14,7 @@ html
       | {% for movie in latest_movie_list %}
       li
         a(href="/movies/{{ movie.id }}/")
+          img( src="/{{movie.cover}}" )
           {{ movie.name }}
       | {% endfor %}
 

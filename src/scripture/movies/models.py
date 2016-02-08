@@ -13,7 +13,7 @@ class Movie(models.Model):
   pub_date = models.DateTimeField('published')
   director = models.CharField( max_length = 200 )
   writer = models.CharField( max_length = 200 )
-  cover = models.FileField(upload_to = 'img/')
+  cover = models.FileField(upload_to='covers/')
   def __unicode__(self):
     return "%s" % (self.name)
 
@@ -27,7 +27,9 @@ class Script(models.Model):
   script = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='sequences')
   act = models.CharField( max_length = 2, choices=ACT_CHOICES, default= ACT_I )
   sequence = models.IntegerField(default=0)
+  begin = models.CharField( max_length = 20 )
+  end = models.CharField( max_length = 20 )
   description = models.TextField( max_length = 140 )
-  image = models.FileField(upload_to = 'img/')
+  image = models.FileField(upload_to = 'sequences/')
   def __unicode__(self):
     return "%s (%s)" % (self.script, self.sequence)

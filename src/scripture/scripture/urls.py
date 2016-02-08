@@ -1,13 +1,11 @@
-
 from django.conf.urls import url, include
 from django.contrib import admin
 from movies.models import Movie, Script
 from rest_framework import routers, serializers, viewsets
+from django.conf import settings
+from django.conf.urls.static import static
 
 
-# class MovieSerializer(serializers.HyperlinkedModelSerializer):
-#     class Meta:
-#         model = Movie
 class ScriptSerializer(serializers.ModelSerializer):
     class Meta:
         model = Script
@@ -32,4 +30,4 @@ urlpatterns = [
     url(r'^movies/', include('movies.urls')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^admin/', admin.site.urls),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
