@@ -3,10 +3,12 @@
 
 *Requirements
 
-```bash
-
+```
 pip install djangorestframework
-pip install markdown       # Markdown support for the browsable API.
-pip install django-filter  # Filtering support
+pip install markdown
+pip install django-filter
+pip install django-bootstrap3
+pip install pyjade
+pip install django-libsass
 
 ```

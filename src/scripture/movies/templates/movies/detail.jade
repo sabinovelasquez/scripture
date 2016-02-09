@@ -12,7 +12,7 @@ html
 		h2 {{ movie.year }}
 		h2 {{ movie.director }}
 		h2 {{ movie.writer }}
-		img( src="{% static movie.cover %}" )
+		img( src="{{movie.cover.url}}" )
 		ul
 			| {% for script in movie.sequences.all %}
 			li
@@ -24,7 +24,7 @@ html
 					{{ script.end }}
 				span
 					{{ script.sequence }}
-					img( src="{% static script.image %}" )
+					img( src="{{script.image.url}}" )
 				span
 					{{ script.description }}
 			| {% endfor %}

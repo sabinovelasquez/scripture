@@ -14,7 +14,7 @@ html
       | {% for movie in latest_movie_list %}
       li
         a(href="/movies/{{ movie.id }}/")
-          img( src="/{{movie.cover}}" )
+          img( src="{{movie.cover.url}}" )
           {{ movie.name }}
       | {% endfor %}
 
