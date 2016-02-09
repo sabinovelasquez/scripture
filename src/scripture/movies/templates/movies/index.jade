@@ -5,10 +5,11 @@
 doctype html
 html
   head
-    title Index
-    link(rel="stylesheet", type="text/css", href="{% static 'style.css' %}")
+    title Scripture
+    link(rel="stylesheet", type="text/css", href="{% static 'scss/home.scss' %}")
   body
-    h1 Hello
+    header
+      h1.text-center Scripture
     | {% if latest_movie_list %}
     ul
       | {% for movie in latest_movie_list %}

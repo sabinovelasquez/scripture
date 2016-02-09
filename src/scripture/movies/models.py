@@ -14,6 +14,7 @@ class Movie(models.Model):
   director = models.CharField( max_length = 200 )
   writer = models.CharField( max_length = 200 )
   cover = models.FileField(upload_to='covers/')
+  genre = models.CharField( max_length = 200 )
   def __unicode__(self):
     return "%s" % (self.name)
 
@@ -24,9 +25,11 @@ class Script(models.Model):
   ACT_CHOICES = (
     (ACT_I, 'ACT I'), (ACT_II, 'ACT II'), (ACT_III, 'ACT III'),
   )
+  SEQ = [(i,i) for i in range(1,9)]
+
   script = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='sequences')
   act = models.CharField( max_length = 2, choices=ACT_CHOICES, default= ACT_I )
-  sequence = models.IntegerField(default=0)
+  sequence = models.IntegerField( choices=SEQ, default= 1 )
   begin = models.CharField( max_length = 20 )
   end = models.CharField( max_length = 20 )
   description = models.TextField( max_length = 140 )

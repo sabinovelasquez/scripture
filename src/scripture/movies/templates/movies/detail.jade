@@ -16,18 +16,20 @@ html
 		h5.text-center
 			| Guión: {{ movie.writer }}
 		ul.timeline
-			| {% for script in movie.sequences.all %}
+			{% for script in movie.sequences.all %}
+			{% if script.sequence == 1 or script.sequence == 3 or script.sequence == 8 %}
 			li.act
 				span.center
-					| ACT I
+					| ACT {{script.act}}
+			{% endif %}
 			li
 				.in(class="{% if forloop.counter|divisibleby:2 %}direction-l{% else %}direction-r{% endif %}")		
 					.flag-wrapper
 						span.flag Status Quo
 						span.time-wrapper
-						span.time 00:00 - 10:00
+							span.time {{script.begin}} - {{script.end}}
 					.desc 
 						| Hi in prision, marries Ed, can't have babies with her.
 						.img-container
 							img.img-responsive.center-block( src="{{script.image.url}}" )
-			| {% endfor %}
+			{% endfor %}
