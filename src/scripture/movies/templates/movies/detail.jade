@@ -5,26 +5,29 @@
 doctype html
 html
 	head
-		title my jade template
+		title {{movie.name}} - 8 Secuencias
 		link(rel="stylesheet", type="text/css", href="{% static 'scss/timeline.scss' %}")
 	body
-		h1.text-center {{ movie.name }}
-		h2 {{ movie.year }}
-		h2 {{ movie.director }}
-		h2 {{ movie.writer }}
-		img( src="{{movie.cover.url}}" )
-		ul
+		h1.text-center {{ movie.name }} 
+			small 
+				| ({{ movie.year }})
+		h5.text-center
+			| Dirigida por: {{ movie.director }}
+		h5.text-center
+			| Guión: {{ movie.writer }}
+		ul.timeline
 			| {% for script in movie.sequences.all %}
+			li.act
+				span.center
+					| ACT I
 			li
-				span
-					{{ script.act }}
-				span
-					{{ script.begin }}
-				span
-					{{ script.end }}
-				span
-					{{ script.sequence }}
-					img( src="{{script.image.url}}" )
-				span
-					{{ script.description }}
+				.in(class="{% if forloop.counter|divisibleby:2 %}direction-l{% else %}direction-r{% endif %}")		
+					.flag-wrapper
+						span.flag Status Quo
+						span.time-wrapper
+						span.time 00:00 - 10:00
+					.desc 
+						| Hi in prision, marries Ed, can't have babies with her.
+						.img-container
+							img.img-responsive.center-block( src="{{script.image.url}}" )
 			| {% endfor %}
