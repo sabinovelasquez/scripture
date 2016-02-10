@@ -14,4 +14,6 @@ pip install django-bootstrap3
 pip install pyjade
 pip install django_compressor
 
+https://django-taggit.readthedocs.org/en/latest/
+
 ```

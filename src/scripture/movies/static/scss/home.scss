@@ -16,8 +16,10 @@ header{
 	min-height:320px;
 	// background: url('../../media/site/header.jpg');
 	background-size: cover;
-	h1{
-    text-indent: 200px;
-		color:red;
-	}
+
+}
+h1{
+  font-size: 1.6em;
+  text-transform: uppercase;
+  font-weight: bold;
 }

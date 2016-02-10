@@ -18,17 +18,40 @@ html
             span.icon-bar
             span.icon-bar
             span.icon-bar
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a link1
+            li
+              a link2
+            li
+              a link3
+
+    
+    header
+      .container
+        h1.text-center Scripture
 
     .container
-      header
-        h1.text-center Scripture
-    | {% if latest_movie_list %}
-    ul
+
+      | {% if latest_movie_list %}
+      
       | {% for movie in latest_movie_list %}
-      li
-        a(href="/movies/{{ movie.id }}/")
-          img( src="{{movie.cover.url}}" )
-          {{ movie.name }}
+      .movie.col-sm-6.col-md-4
+        .col-sm-6
+          img.img-responsive( src="{{movie.cover.url}}" )
+        .col-sm-6
+          h5
+            |{{movie.name}}
+            small
+              |  ({{movie.year}})
+          p
+            |{{movie.director}}
+          p
+            |{{movie.writer}}
+
+          a.btn.btn-default(href="/movies/{{ movie.id }}/")
+            | Estructura
       | {% endfor %}
 
     | {% else %}
