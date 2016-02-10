@@ -1,3 +1,4 @@
+{% load compress %}
 {% load staticfiles %}
 {% load bootstrap3 %}
 {% bootstrap_css %}
@@ -6,10 +7,21 @@ doctype html
 html
   head
     title Scripture
+    {% compress css inline %}
     link(rel="stylesheet", type="text/css", href="{% static 'scss/home.scss' %}")
+    {% endcompress %}
   body
-    header
-      h1.text-center Scripture
+    .navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+
+    .container
+      header
+        h1.text-center Scripture
     | {% if latest_movie_list %}
     ul
       | {% for movie in latest_movie_list %}
