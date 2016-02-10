@@ -8,18 +8,31 @@ html
     title Scripture
     link(rel="stylesheet", type="text/css", href="{% static 'scss/home.scss' %}")
   body
-    header
-      h1.text-center Scripture
-    | {% if latest_movie_list %}
-    ul
-      | {% for movie in latest_movie_list %}
-      li
-        a(href="/movies/{{ movie.id }}/")
-          img( src="{{movie.cover.url}}" )
-          {{ movie.name }}
-      | {% endfor %}
+    .container
+      header
+        h1.text-center Scripture
+    {% if latest_movie_list %}
 
-    | {% else %}
+    .container
+      .movielist.col-sm-4
+        {% for movie in latest_movie_list %}
+        .col-sm-6
+          img.img-responsive( src="{{movie.cover.url}}" )
+        .col-sm-6
+          h4
+            {{ movie.name }}
+            small ({{movie.year}})
+          p
+            | Dirección: {{movie.director}}
+          p
+            | Guión: {{movie.writer}}
+          p.tags
+            | Género: {{movie.genre}}
+          button.btn
+            | ver estructura
+        {% endfor %}
+
+    {% else %}
     p
       | nothing.
-    | {% endif %}
+    {% endif %}
