@@ -8,7 +8,7 @@ class ScriptInline(admin.StackedInline):
 
 class MovieAdmin(admin.ModelAdmin):
 	fieldsets = [
-		( 'Movie', {'fields': ['name', 'cover', 'genre', 'director', 'writer', 'year', 'pub_date']}),
+		( 'Movie', {'fields': ['name', 'cover', 'tags', 'director', 'writer', 'year', 'pub_date']}),
 	]
 	inlines = [ScriptInline]
 

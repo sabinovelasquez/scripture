@@ -1,3 +1,4 @@
+{% load compress %}
 {% load staticfiles %}
 {% load bootstrap3 %}
 {% bootstrap_css %}
@@ -6,31 +7,65 @@ doctype html
 html
   head
     title Scripture
+    {% compress css inline %}
     link(rel="stylesheet", type="text/css", href="{% static 'scss/home.scss' %}")
+    {% endcompress %}
   body
-    .container
-      header
+
+    .navbar.navbar-default.navbar-fixed-top
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        .collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a link1
+            li
+              a link2
+            li
+              a link3
+
+    
+    header
+      .hovervid
+      video.video(autoplay loop)
+        source(src="../../media/video/videobg.mp4" type="video/mp4")
+        source(src="../../media/video/videobg.ogv" type="video/ogg")
+        source(src="../../media/video/videobg.webm" type="video/webm")
+      .container
         h1.text-center Scripture
-    {% if latest_movie_list %}
 
     .container
-      .movielist.col-sm-4
-        {% for movie in latest_movie_list %}
+
+      {% if latest_movie_list %}
+      
+      {% for movie in latest_movie_list %}
+      .movie.col-sm-6.col-md-4
         .col-sm-6
           img.img-responsive( src="{{movie.cover.url}}" )
         .col-sm-6
-          h4
-            {{ movie.name }}
-            small ({{movie.year}})
+          h5
+            |{{movie.name}}
+            small
+              |  ({{movie.year}})
           p
-            | Dirección: {{movie.director}}
+            |{{movie.director}}
           p
-            | Guión: {{movie.writer}}
-          p.tags
-            | Género: {{movie.genre}}
-          button.btn
-            | ver estructura
-        {% endfor %}
+            {% for tag in movie.tags.names %}
+            button.btn.btn-default.btn-xs(href='#')
+              
+              |{{tag}}  
+              span.glyphicon.glyphicon-tags 
+            {% endfor %}
+          p
+            |{{movie.writer}}
+
+          a.btn.btn-default(href="/movies/{{ movie.id }}/")
+            | Estructura
+      {% endfor %}
 
     {% else %}
     p

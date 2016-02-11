@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'taggit',
     'bootstrap3',
     'rest_framework',
     'movies.apps.MoviesConfig',
@@ -40,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'compressor',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -128,9 +130,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-COMPRESS_PRECOMPILERS = (
-    ('text/x-scss', 'django_libsass.SassCompiler'),
-)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
@@ -141,4 +140,17 @@ STATIC_ROOT = '/Users/sabino/dev/scripture/static/'
 MEDIA_ROOT = '/Users/sabino/dev/scripture/src/scripture/media/'
 MEDIA_URL = '/media/'
 
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
 
+COMPRESS_ROOT = STATIC_ROOT
+COMPRESS_URL = STATIC_URL
+COMPRESS_ENABLED = True
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-sass', 'scss {infile} {outfile}'),
+    ('text/x-scss', 'scss --sass {infile} {outfile}'),
+)

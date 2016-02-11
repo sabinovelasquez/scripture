@@ -3,9 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils import timezone
 from datetime import datetime
-
-
-
+from taggit.managers import TaggableManager
 
 class Movie(models.Model):
   name = models.CharField( max_length = 200 )
@@ -14,7 +12,7 @@ class Movie(models.Model):
   director = models.CharField( max_length = 200 )
   writer = models.CharField( max_length = 200 )
   cover = models.FileField(upload_to='covers/')
-  genre = models.CharField( max_length = 200 )
+  tags = TaggableManager()
   def __unicode__(self):
     return "%s" % (self.name)
 
