@@ -15,7 +15,7 @@ class MovieSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Movie
-        fields = ('name', 'director', 'writer', 'year', 'cover', 'sequences')
+        fields = ('name', 'director', 'writer', 'year', 'cover', 'slug','sequences')
         
 class MovieViewSet(viewsets.ModelViewSet):
     queryset = Movie.objects.all()
@@ -26,8 +26,8 @@ router = routers.DefaultRouter()
 router.register(r'scripts', MovieViewSet)
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
-    url(r'^movies/', include('movies.urls')),
+    url(r'^', include('movies.urls')),
+    url(r'^api', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

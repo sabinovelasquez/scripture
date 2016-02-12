@@ -8,10 +8,21 @@ html
 	head
 		title {{movie.name}} - 8 Secuencias
 		{% compress css inline %}
+		link(rel="stylesheet", type="text/css", href="{% static 'scss/logo.scss' %}")
 		link(rel="stylesheet", type="text/css", href="{% static 'scss/timeline.scss' %}")
 		{% endcompress %}
 	body
-		h1.text-center {{ movie.name }} 
+		nav.navbar.navbar-default.navbar-fixed-top
+			.container
+				navbar-header
+					a.navbar-brand(href="{% static '../' %}")
+						span.glyphicon.glyphicon-chevron-left
+						| Back
+				a.logo-cont(href="{% static '../' %}")
+					.logo
+		{% if movie.sequences.all|length > 7 %}
+		h1.text-center {{ movie.name }}
+		h3.text-center
 			small 
 				| ({{ movie.year }})
 		h5.text-center
@@ -36,3 +47,10 @@ html
 						.img-container
 							img.img-responsive.center-block( src="{{script.image.url}}" )
 			{% endfor %}
+
+			{% else %}
+			br
+			br
+			h1.text-center 
+				| Available soon...
+			{% endif %}

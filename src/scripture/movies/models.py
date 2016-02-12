@@ -4,9 +4,11 @@ from django.db import models
 from django.utils import timezone
 from datetime import datetime
 from taggit.managers import TaggableManager
+from django.template.defaultfilters import slugify
 
 class Movie(models.Model):
   name = models.CharField( max_length = 200 )
+  slug = models.SlugField(blank=True)
   year = models.IntegerField(default = datetime.now().year )
   pub_date = models.DateTimeField('published')
   director = models.CharField( max_length = 200 )
@@ -15,6 +17,10 @@ class Movie(models.Model):
   tags = TaggableManager()
   def __unicode__(self):
     return "%s" % (self.name)
+  def save(self):
+    self.slug = slugify(self.name)
+    super(Movie, self).save()
+
 
 class Script(models.Model):
   ACT_I = 'I'

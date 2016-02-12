@@ -11,7 +11,20 @@ body {
   // line-height: 1.6em;
 }
 
+.logo{
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+.logo-cont{
+  float: left;
+  left: 50%;
+  position: absolute;
+  top: 15px;
+  margin-left: -25px;
+}
 h1{
+  margin-top: 80px;
   font-size: 1.6em;
   text-transform: uppercase;
   font-weight: bold;
@@ -50,6 +63,7 @@ h1{
   display: block;
   width: 6px;
   height: 100%;
+  opacity: .5;
   margin-left: -3px;
   background: rgb(80, 80, 80);
   background: -moz-linear-gradient(top, rgba(80, 80, 80, 0) 0%, rgb(80, 80, 80) 8%, rgb(80, 80, 80) 92%, rgba(80, 80, 80, 0) 100%);
@@ -79,7 +93,7 @@ li.act{
 span.center{
   font-size: 1.2em;
   text-transform: uppercase;
-  background: #c0392b;
+  background: #E74C3C;
   color: white;
   padding: 8px;
   position: relative;
@@ -149,7 +163,7 @@ span.center{
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  border: 4px solid #c0392b;
+  border: 4px solid #E74C3C;
   z-index: 10;
 }
 
@@ -166,7 +180,7 @@ span.center{
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  border: 4px solid #c0392b;
+  border: 4px solid #E74C3C;
   z-index: 10;
   left: -40px;
 }
@@ -203,7 +217,7 @@ span.center{
   display: inline;
   line-height: 1em;
   // font-size: 0.66666em;
-  color: #c0392b;
+  color: #E74C3C;
   vertical-align: middle;
 }
 
@@ -252,7 +266,7 @@ span.center{
     text-align: center;
   }
   .flag {
-    background: rgb(255, 255, 255);
+    background: #404040;
     z-index: 15;
   }
   .direction-l .flag:before, .direction-r .flag:before {
@@ -278,7 +292,7 @@ span.center{
     width: 0;
     margin-left: -8px;
     border: solid transparent;
-    border-bottom-color: rgb(255, 255, 255);
+    border-bottom-color: #404040;
     border-width: 8px;
     pointer-events: none;
   }

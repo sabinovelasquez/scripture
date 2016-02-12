@@ -135,9 +135,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/Users/sabino/dev/scripture/static/'
+STATIC_ROOT = '/Users/sabino/py/dev/scripture/static/'
 
-MEDIA_ROOT = '/Users/sabino/dev/scripture/src/scripture/media/'
+MEDIA_ROOT = '/Users/sabino/py/dev/scripture/src/scripture/media/'
 MEDIA_URL = '/media/'
 
 STATICFILES_FINDERS = (

@@ -1,0 +1,158 @@
+.logo{
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iMjEwLjMxMXB4IiBoZWlnaHQ9IjIxMC4zMXB4IiB2aWV3Qm94PSIwIDAgMjEwLjMxMSAyMTAuMzEiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIxMC4zMTEgMjEwLjMxIg0KCSB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxjaXJjbGUgZmlsbD0iI0U3NEMzQyIgY3g9IjEwNS4xNTUiIGN5PSIxMDUuMTU1IiByPSIxMDUuMTU1Ii8+DQo8cGF0aCBvcGFjaXR5PSIwLjIiIGZpbGw9IiNFQ0YwRjEiIGQ9Ik0xMjMuODYxLDEwMS4zMDljLTAuMTEsMC0wLjIxOS0wLjMyOS0wLjMzLTAuMzkxYzMuMDY5LTEuNjE0LDUuNjU1LTMuODk1LDguMTU4LTYuNjQyDQoJYzUuNjUzLTYuMjE4LDguMjgtMTQuMTUyLDguMjgtMjMuNjAxdi0xLjY3NGgtMTkuOTM4YzAuMDY1LDUuNzMyLTAuOTQyLDEwLjI2MS0zLjAyOCwxMy43MDNjLTIuNDk3LDQuMDk2LTYuNDgsNi4wNjYtMTEuOTQ3LDYuMDc3DQoJdjEyLjUyOEgxMjMuODYxeiIvPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTEzOS40ODEsMTE4LjI0MmMtMy42NTUtNy42MjYtOC45OTQtMTMuMjg1LTE1LjYyLTE2LjkzM2gtMTguODA1djEzLjk4NGMzLjAxMiwwLDUuNDgsMC40Nyw3LjM0OSwxLjU2Mw0KCWMwLjI4NiwwLjE2OCwwLjYzOCwwLjMwNywwLjg5NSwwLjVjNC4xMTksMy4wNyw2LjM0OCw5LjA4OCw2LjM0OCwxOC4xMzF2NS40MjV2MS44NDVjMCwyLjc0Ni0wLjYxNCw1LjA4OC0xLjUwMSw3LjAyNg0KCWMtMC4zMiwwLjc2OC0wLjcxNiwxLjQ4My0xLjEwNCwyLjE1NWMtMi41NDgsNC40MTgtNi41NjcsNi43NzMtMTEuOTY2LDcuMDUyYy0wLjAwOSwwLTAuMDI2LTAuMDAxLTAuMDMzLTAuMDAxDQoJcy0wLjA4MSwwLjAwMS0wLjA4NywwLjAwMWMtMC4xMTktMC4wMDUtMC40MjEtMC4wMTUtMC40MjEtMC4wMjJjLTMuMTI2LTAuMjI3LTYuOS0xLjU5LTkuNDA1LTQuMDk2DQoJYy0zLjA2OS0zLjA2OS00LjY2NC03LjEwNy00LjY2NC0xMi4xMTV2LTEuODQ1SDY3LjUzOHY1LjM1NmMwLDkuOTM2LDMuNjUyLDE4LjUxMiwxMC42OCwyNS42MTYNCgljNy4wMjYsNy4xMDcsMTUuNzI3LDEwLjcxNSwyNS44MjIsMTAuNzE1aDAuNDk1aDEuMzIyYzEwLjAxNCwwLDE4Ljc2My0zLjU2NSwyNS44NzEtMTAuNTk0YzcuMTA2LTcuMDI2LDEwLjg0Ny0xNS42NCwxMC44NDctMjUuNzM3DQoJdi01LjM1NnYtOC40NTRDMTQyLjU3NSwxMjYuODA4LDE0MS40MjEsMTIyLjE5OSwxMzkuNDgxLDExOC4yNDJ6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTA1LjAxLDg4LjgwM2MtNS40OTMsMC05LjQ0OC0xLjg2Mi0xMS44NzItNS43MjZjLTEuODQ5LTIuODgzLTMuMTE5LTcuODIzLTMuMzY5LTE0LjA3NmwwLDANCgljLTAuMDAxLDAsMC4wMDEtMC4xNzksMC4wMDMtMC4yMTZjLTAuMDAyLDAuMDAyLTAuMDAzLDAuMDA1LTAuMDAzLDAuMDAyYy0wLjE2My00LjE4OCwwLjE3NS03Ljc4MSwxLjAyMi0xMC41Ng0KCWMwLjg0OS0yLjc3OCwyLjIzNy01LjA1Myw0LjI1OC02LjgyNWMyLjQ2OC0yLjE0NCw1LjMxOC0zLjIyNyw5LjQ4Ni0zLjI1NmMwLTAuMDAxLDAuMTM5LTAuMDA1LDAuMTkyLTAuMDA1DQoJYzIuMDE4LDAsMy43MTYsMC4zMjEsNS4xNywwLjk2NWM2LjM4LDIuNjU3LDkuNzUsOS4xOCw5Ljc1LDE5LjU2OWMwLDAsMCwwLDAsMC4wMDFjMCwwLDAsMC4wMDMsMCwwLjAwNGMwLDAuMDQyLDAsMC4xMzIsMCwwLjMyDQoJaDIwLjMyMnYtNi41NjVjMC05Ljc3MS0yLjgxMi0xNy44MDMtOC42MjgtMjQuMzQ1Yy02LjQ2Mi03LjI2OS0xNC45NjgtMTAuNzc4LTI1LjcwOC0xMC43NzhoLTEuMDk5aC0wLjcyDQoJYy0xMC42NiwwLTE5LjM3NiwzLjUwOS0yNS44MzcsMTAuNzc4Yy01LjgxNCw2LjQ2Mi04Ljg3NywxNC40OTMtOC44NzcsMjQuMzQ1djYuNTY1djEuNjc0YzAsNS43MzUsMS4xMTUsMTAuNSwyLjgxMSwxNC4yOTQNCgljMy4zOTMsNy4zNTEsOC4yOTEsMTIuNzk4LDE0LjQyOSwxNS45NDhjLTAuMTE0LDAuMDYyLTAuMTEsMC4zOTEtMC4yMjUsMC4zOTFoMTguOTRWODguODAzDQoJQzEwNS4wNDEsODguODAzLDEwNS4wMjYsODguODAzLDEwNS4wMSw4OC44MDN6Ii8+DQo8cGF0aCBvcGFjaXR5PSIwLjIiIGZpbGw9IiNFQ0YwRjEiIGQ9Ik04Ni4xMTYsMTAxLjMwOWMtMy40MTMsMS41NjQtNi41NCw0LjEwOC05LjExOSw2Ljk5OWMtNi4yMjIsNi45NDYtOS40NTksMTQuODY1LTkuNDU5LDI0LjE1DQoJdjguNDU0aDIyLjkyOHYtNS40MjVjMC01LjI0OSwwLjc3LTkuMzI4LDIuMDYyLTEyLjQ3OGMyLjE4Mi01LjE2OCw2LjQzLTcuNjMyLDEyLjQ4Ni03LjYzMmMwLjAwOCwwLDAuMDE0LDAsMC4wMjEsMA0KCWMwLjAwOCwwLDAuMDE1LDAsMC4wMjEsMHYtMTQuMDY5SDg2LjExNnoiLz4NCjwvc3ZnPg0K');
+}
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic');
+
+body {
+
+  margin: 0;
+  padding: 0;
+  background: rgb(230, 230, 230);
+  color: rgb(50, 50, 50);
+  font-family: 'Open Sans', sans-serif;
+  // font-size: 112.5%;
+  // line-height: 1.6em;
+}
+.logo{
+  width: 80px;
+  height: 80px;
+  display: block;
+  background-size:contain;
+}
+video{
+  margin-top: -180px;
+  width:100%;
+  opacity: .3;
+  min-width: 1200px;
+}
+.hovervid{
+  width:100%;
+  height: 100%;
+  position:absolute;
+  background: url('/media/site/cross-stripes.png');
+}
+.navbar{
+  background: transparent;
+  border: none;
+}
+.tagremove{
+    font-size: 15px;
+    margin-left: 3px;
+    color: #E74C3C;
+}
+header{
+  position: relative;
+  overflow: hidden;
+	height:420px;
+	background: #2c3e50;
+	background-size: cover;
+  border-bottom: solid #2c3e50 2px;
+  margin-bottom: 30px;
+}
+section{
+  padding: 80px 0;
+}
+footer{
+  background: #2c3e50;
+  min-height: 80px;
+  margin-top: 80px;
+}
+footer p{
+  padding-top: 10px;
+}
+footer small{
+
+  color: white;
+  font-weight: 300;
+}
+.movielist h5{
+	font-size: 1em;
+	font-weight: 600;
+}
+.movielist p{
+	font-size: .9em;
+}
+.movielist .btn.tag{
+  margin: 2px;
+}
+.movielist .btn.breakdown{
+  background-color: #E74C3C;
+  border: none;
+  border-bottom: 3px solid #c0392b;
+  color: white;
+}
+.movielist .btn.breakdown:hover{
+  margin-top: 3px;
+  border: none;
+  background-color: #E74C3C;
+  border-bottom: 0px solid #a94442;
+  color: white;
+}
+.movielist .poster{
+  -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+}
+.movie{
+  margin-bottom: 20px;
+}
+.title{
+  position: absolute;
+  top:20%;
+  width: 240px;
+  margin-left: -120px;
+  left: 50%;
+  z-index: 2;
+}
+.title h1{
+  color: white;
+}
+h2.tagtitle{
+  color:#2c3e50;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.title h1{
+  position:relative;
+  font-size: 1.6em;
+  text-transform: uppercase;
+}
+.title h1:before{
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 1px;
+  background: white;
+  display: block;
+  top: 10px;
+  left: 8px;
+}
+.title h1:after{
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 1px;
+  background: white;
+  display: block;
+  top: 10px;
+  right: 8px;
+}
+.title small{
+  color: white;
+  width: 240px;
+  position: relative;
+  height: 30px;
+  float: left;
+  letter-spacing: 3px;
+  text-align: center;
+  text-indent: 3px;
+}
+h5 a{
+  color: #E74C3C;
+  font-weight: 600;
+}
+h5 a:hover{
+  color: #a94442;
+  font-weight: 600;
+}

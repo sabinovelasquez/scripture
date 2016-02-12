@@ -6,68 +6,76 @@
 doctype html
 html
   head
-    title Scripture
-    {% compress css inline %}
+    title Scripture {% if tag %} - {{tag}}{% endif %}
+    {% compress css %}
+    link(rel="stylesheet", type="text/css", href="{% static 'scss/logo.scss' %}")
     link(rel="stylesheet", type="text/css", href="{% static 'scss/home.scss' %}")
     {% endcompress %}
-  body
-
-    .navbar.navbar-default.navbar-fixed-top
-      .container-fluid
-        .navbar-header
-          button.navbar-toggle.collapsed
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-        .collapse.navbar-collapse
-          ul.nav.navbar-nav
-            li.active
-              a link1
-            li
-              a link2
-            li
-              a link3
-
-    
+  body   
     header
+      .title
+        .logo.center-block
+        h1.text-center Scripture
+        small.text-center The 8 sequence breakdown
       .hovervid
       video.video(autoplay loop)
         source(src="../../media/video/videobg.mp4" type="video/mp4")
         source(src="../../media/video/videobg.ogv" type="video/ogg")
         source(src="../../media/video/videobg.webm" type="video/webm")
-      .container
-        h1.text-center Scripture
+    
 
-    .container
+    section.movielist.container
+      {% if tag %}
+      h2.tagtitle.text-center
+        | Tagged: 
+        span.tagged
+          | {{tag}}
+        a(href="/")
+          span.tagremove.glyphicon.glyphicon-remove
+      hr
+      {% endif %}
 
       {% if latest_movie_list %}
       
       {% for movie in latest_movie_list %}
-      .movie.col-sm-6.col-md-4
+      .movie.col-sm-6.col-md-6.col-lg-4
         .col-sm-6
-          img.img-responsive( src="{{movie.cover.url}}" )
+          a(href="/{{ movie.slug }}")
+            img.img-responsive.center-block.poster( src="{{movie.cover.url}}" )
         .col-sm-6
           h5
-            |{{movie.name}}
+            a(href="/{{ movie.slug }}/")
+              |{{movie.name}}
             small
               |  ({{movie.year}})
           p
-            |{{movie.director}}
+            span.glyphicon.glyphicon-bullhorn 
+            |  {{movie.director}}
+          p
+            span.glyphicon.glyphicon-pencil
+            |  {{movie.writer}}
+
           p
             {% for tag in movie.tags.names %}
-            button.btn.btn-default.btn-xs(href='#')
-              
-              |{{tag}}  
-              span.glyphicon.glyphicon-tags 
+            a(href="/tag/{{tag}}")
+              button.tag.btn.btn-default.btn-xs
+                |{{tag}}  
+                span.glyphicon.glyphicon-tags 
             {% endfor %}
-          p
-            |{{movie.writer}}
 
-          a.btn.btn-default(href="/movies/{{ movie.id }}/")
-            | Estructura
+
+          a.btn.btn-default.breakdown(href="/{{ movie.slug }}/")
+            | Breakdown
       {% endfor %}
 
     {% else %}
     p
       | nothing.
     {% endif %}
+    footer
+      .container
+        p.text-center
+          small
+            | Scripture© 2016 - content, code and design by 
+            a( href="http://www.sabino.cl")
+              | Sabino 

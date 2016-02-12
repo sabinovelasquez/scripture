@@ -10,10 +10,17 @@ body {
   // font-size: 112.5%;
   // line-height: 1.6em;
 }
+.logo{
+  width: 80px;
+  height: 80px;
+  display: block;
+  background-size:contain;
+}
 video{
   margin-top: -180px;
   width:100%;
   opacity: .3;
+  min-width: 1200px;
 }
 .hovervid{
   width:100%;
@@ -25,25 +32,130 @@ video{
   background: transparent;
   border: none;
 }
+.tagremove{
+    font-size: 15px;
+    margin-left: 3px;
+    color: #E74C3C;
+}
 header{
   position: relative;
   overflow: hidden;
-	height:340px;
+	height:420px;
 	background: #2c3e50;
 	background-size: cover;
   border-bottom: solid #2c3e50 2px;
   margin-bottom: 30px;
 }
-.movielist h4{
-	font-size: 1.2em;
-	font-weight: 400;
+section{
+  padding: 80px 0;
+}
+footer{
+  background: #2c3e50;
+  min-height: 80px;
+  margin-top: 80px;
+}
+footer p{
+  padding-top: 30px;
+}
+footer small{
+  color: white;
+  font-weight: 300;
+}
+footer small a{
+  color: #E74C3C;
+  font-weight: 300;
+}
+footer small a:hover{
+  color: white;
+}
+.movielist h5{
+	font-size: 1em;
+	font-weight: 600;
 }
 .movielist p{
 	font-size: .9em;
-
 }
-h1{
+.movielist .btn.tag{
+  margin: 2px;
+}
+.movielist .btn.breakdown{
+  background-color: #E74C3C;
+  border: none;
+  border-bottom: 3px solid #c0392b;
+  color: white;
+}
+.movielist .btn.breakdown:hover{
+  margin-top: 3px;
+  border: none;
+  background-color: #E74C3C;
+  border-bottom: 0px solid #a94442;
+  color: white;
+}
+.movielist .poster{
+  -webkit-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15), 0 0 1px rgba(0, 0, 0, 0.15);
+}
+.movie{
+  margin-bottom: 20px;
+}
+.title{
+  position: absolute;
+  top:20%;
+  width: 240px;
+  margin-left: -120px;
+  left: 50%;
+  z-index: 2;
+}
+.title h1{
+  color: white;
+}
+h2.tagtitle{
+  color:#2c3e50;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.title h1{
+  position:relative;
   font-size: 1.6em;
   text-transform: uppercase;
-  font-weight: bold;
+}
+.title h1:before{
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 1px;
+  background: white;
+  display: block;
+  top: 10px;
+  left: 8px;
+}
+.title h1:after{
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 1px;
+  background: white;
+  display: block;
+  top: 10px;
+  right: 8px;
+}
+.title small{
+  color: white;
+  width: 240px;
+  position: relative;
+  height: 30px;
+  float: left;
+  letter-spacing: 3px;
+  text-align: center;
+  text-indent: 3px;
+}
+h5 a{
+  color: #E74C3C;
+  font-weight: 600;
+}
+h5 a:hover{
+  color: #a94442;
+  font-weight: 600;
 }
