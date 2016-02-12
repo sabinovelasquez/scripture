@@ -7,9 +7,9 @@ doctype html
 html
   head
     title Scripture {% if tag %} - {{tag}}{% endif %}
-    {% compress css %}
-    link(rel="stylesheet", type="text/css", href="{% static 'scss/logo.scss' %}")
-    link(rel="stylesheet", type="text/css", href="{% static 'scss/home.scss' %}")
+    {% compress css%}
+    link(rel="stylesheet", type="text/x-sass", href="{% static 'scss/logo.scss' %}")
+    link(rel="stylesheet", type="text/x-sass", href="{% static 'scss/home.scss' %}")
     {% endcompress %}
   body   
     header

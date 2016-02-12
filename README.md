@@ -5,6 +5,7 @@
 
 ```
 
+gem install sass
 pip install pyScss
 pip install django-appconf
 pip install djangorestframework
