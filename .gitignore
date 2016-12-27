@@ -1,6 +1,10 @@
 /.bundle
 /build
+*.pyc
+db.sqlite3
 /.sass-cache
 /.cache
 Gemfile.lock
 .DS_Store
+/static
+media

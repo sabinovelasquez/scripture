@@ -2,18 +2,15 @@
 
 
 *Requirements
+`gem install sass`
+
+Virtual Enviroment and pip
 
 ```
-
-gem install sass
-pip install pyScss
-pip install django-appconf
-pip install djangorestframework
-pip install markdown
-pip install django-filter
-pip install django-bootstrap3
-pip install pyjade
-pip install django_compressor
-pip install django-taggit
-
+virtualenv venv
+source venv/bin/activate
+pip install -r requirements.txt
 ```
+
+Shut down Virtual Enviroment
+`deactivate`
