@@ -7,5 +7,5 @@ db.sqlite3
 Gemfile.lock
 .DS_Store
 /static
-/media
+media
 /venv
